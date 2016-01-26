@@ -20,6 +20,8 @@ class CategoryController extends BaseController
         return view('admin/category/list');
     }
 
+
+
     public function add() {
         return view('admin/category/add');
     }
