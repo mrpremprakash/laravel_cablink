@@ -5,7 +5,6 @@ myDemoApp.service('categoryService', function($http, $q) {
         return $http.get('admin/categories/list?limit=10')
             .then(function (response) {
                 var data = response.data.data;
-                console.log(data);
                 deferred.resolve(data);
                 categories = data;
                 return deferred.promise;
