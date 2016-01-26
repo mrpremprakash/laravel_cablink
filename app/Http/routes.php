@@ -37,6 +37,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/categories', ['as' => 'admin.categories', 'uses' => 'categoryController@index']);
     Route::get('/categories/list', ['as' => 'admin.categories', 'uses' => 'categoryController@lists']);
     Route::get('/category/add', ['as' => 'admin.category.add', 'uses' => 'categoryController@add']);
+    Route::post('/category/add', ['as' => 'admin.category.add', 'uses' => 'categoryController@store']);
 });
 
 
