@@ -12,5 +12,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-
+    protected $updated_at = false;
+    protected $created_at = false;
 }

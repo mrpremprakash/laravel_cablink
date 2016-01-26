@@ -26,9 +26,13 @@ Route::group(['prefix' => '/'], function () {
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/', ['as' => 'admin.login', 'uses' => 'loginController@index']);
     Route::get('/dashboard', ['as' => 'admin.dashboard', 'uses' => 'productController@dashboard']);
+
     Route::get('/products', ['as' => 'admin.products', 'uses' => 'productController@index']);
     Route::get('/products/list', ['as' => 'admin.products', 'uses' => 'productController@lists']);
     Route::get('/product/add', ['as' => 'admin.product.add', 'uses' => 'productController@add']);
+    Route::post('/product/add', ['as' => 'admin.product.add', 'uses' => 'productController@store']);
+
+
     Route::get('/categories', ['as' => 'admin.categories', 'uses' => 'categoryController@index']);
     Route::get('/categories/list', ['as' => 'admin.categories', 'uses' => 'categoryController@lists']);
     Route::get('/category/add', ['as' => 'admin.category.add', 'uses' => 'categoryController@add']);

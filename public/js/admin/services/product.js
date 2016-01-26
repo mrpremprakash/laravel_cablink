@@ -14,8 +14,9 @@ myDemoApp.service('productService', function($http, $q) {
     this.getProducts = function() {
         return $http.get('admin/products/list?limit=10')
             .then(function (response) {
-                deferred.resolve(response.data.data);
-                //categories = response.data;
+                var data = response.data.data;
+                deferred.resolve(data);
+                categories = response.data;
                 return deferred.promise;
             }, function (response) {
                 console.log(response);
@@ -26,8 +27,9 @@ myDemoApp.service('productService', function($http, $q) {
             .get("admin/products/list?term=" + $scope.search)
             .success(
                 function(response){
-                    deferred.resolve(response.data);
-                    $scope.products = response.data;
+                    var data = response.data;
+                    deferred.resolve(data);
+                    $scope.products = data;
                     return deferred.promise;
                 }
             );

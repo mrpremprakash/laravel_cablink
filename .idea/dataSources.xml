@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="315718690">
+  <component name="DataSourceManagerImpl" format="xml" hash="2561025554">
     <data-source source="LOCAL" name="MySQL - cablink@localhost" uuid="e3ba174f-9485-4b2e-a1b8-603d3255ded1">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>

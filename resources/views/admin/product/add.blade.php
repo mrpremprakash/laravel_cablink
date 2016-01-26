@@ -8,8 +8,7 @@
             <h1 class="page-header">Add New Product<a href="admin/products" class="pull-right">Back</a></h1>
         </div>
     </div>
-    <form name="productForm" ng-submit="submitForm(productForm.$valid)"
-          novalidate action="" class="dropzone" dropzone="" id="dropzone">
+    <form name="productForm" ng-submit="submitForm(productForm.$valid)" novalidate>
         <div class="row">
             <div class="col">
                 <div class="panel panel-primary">
@@ -64,15 +63,6 @@
                             <br>
                             <div class="row">
                                 <div class="col-lg-2 text-right">
-                                    <label>Image:</label>
-                                </div>
-                                <div class="col-lg-10">
-                                    <div class="dz-default dz-message">
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-lg-2 text-right">
                                     <label>Status:</label>
                                 </div>
                                 <div class="col-lg-10">
@@ -92,7 +82,6 @@
                     </div>
                     <div class="panel-footer">
                         <button type="submit" class="btn btn-primary" ng-disabled="productForm.$invalid">Submit</button>
-                        <button class="btn btn-success" ng-click="uploadFile()">Upload File</button>
                     </div>
                 </div>
             </div>
