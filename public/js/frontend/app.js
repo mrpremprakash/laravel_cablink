@@ -1,5 +1,7 @@
 var cablinkApp = angular.module('cablinkApp', ['ui.router']);
-cablinkApp.config(['$stateProvider', '$locationProvider', function ($stateProvider, $locationProvider) {
+cablinkApp.config(['$stateProvider', '$locationProvider', '$httpProvider', function ($stateProvider, $locationProvider,$httpProvider) {
+    $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
+    
     var home = {
         title: 'Home',
         url: '/',
