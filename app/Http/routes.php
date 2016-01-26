@@ -17,6 +17,7 @@
 
 Route::group(['prefix' => '/'], function () {
     Route::get('/', ['as' => 'frontend.index', 'uses' => 'frontendController@index']);
+    Route::get('/index_content', ['as' => 'frontend.index', 'uses' => 'frontendController@index2']);
     Route::get('/dashboard', ['as' => 'admin.dashboard', 'uses' => 'productController@dashboard']);
     Route::get('/products', ['as' => 'admin.products', 'uses' => 'productController@index']);
     Route::get('/categories', ['as' => 'admin.categories', 'uses' => 'categoryController@index']);

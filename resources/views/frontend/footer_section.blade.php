@@ -44,10 +44,10 @@
                 <div class="col-md-12 col-xs-6">
                     <h5>Payment</h5>
                     <ul class="payment-sect">
-                        <li><a href="#"><img src="images/american-express.png" alt="Paypal" /></a></li>
-                        <li><a href="#"><img src="images/visa.png" alt="Visa" /></a></li>
-                        <li><a href="#"><img src="images/american-express.png" alt="American Express" /></a></li>
-                        <li><a href="#"><img src="images/master-card.png" alt="Master Card" /></a></li>
+                        <li><a href="#"><img src="<% URL::asset('images/american-express.png') %>" alt="Paypal" /></a></li>
+                        <li><a href="#"><img src="<% URL::asset('images/visa.png') %>" alt="Visa" /></a></li>
+                        <li><a href="#"><img src="<% URL::asset('images/american-express.png') %>" alt="American Express" /></a></li>
+                        <li><a href="#"><img src="<% URL::asset('images/master-card.png') %>" alt="Master Card" /></a></li>
                     </ul>
                 </div>
             </div>

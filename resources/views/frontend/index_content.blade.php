@@ -1,6 +1,8 @@
-@extends('layout.frontend_default')
+@extends(((Request::ajax()) ? 'layout.plain' : 'layout.frontend_default'))
+
+<?php if(Request::ajax()):?>
 @section('content')
-<script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="<% URL::asset('js/frontend/custom.js') %>"></script>
 <!--[banner-sect]-->
 <div id="home-slider" class="banner-sect owl-carousel">
     <div class="item">
@@ -54,7 +56,7 @@
     <div class="pro-slider owl-carousel text-center feature-slider">
         <article class="item">
             <div class="quick-info sale-pimg">
-                <figure><img src="images/product-1.jpg" alt="product" data-other-src="images/product-11.jpg" /></figure>
+                <figure><img src="<% URL::asset('images/product-1.jpg') %>" alt="product" data-other-src="<% URL::asset('images/product-11.jpg') %>" /></figure>
                 <ul>
                     <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Add to Cart</a></li>
                     <li><a href="javascript:void(0)" data-toggle="modal" data-target=".quick-view"><i class="fa fa-search-plus"></i> Quick View</a></li>
@@ -70,7 +72,7 @@
 
         <article class="item">
             <div class="quick-info sale-pimg">
-                <figure><img src="images/product-2.jpg" alt="product" data-other-src="images/product-21.jpg" /></figure>
+                <figure><img src="<% URL::asset('images/product-2.jpg') %>" alt="product" data-other-src="<% URL::asset('images/product-21.jpg') %>" /></figure>
                 <ul>
                     <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Add to Cart</a></li>
                     <li><a href="javascript:void(0)" data-toggle="modal" data-target=".quick-view"><i class="fa fa-search-plus"></i> Quick View</a></li>
@@ -86,7 +88,7 @@
 
         <article class="item">
             <div class="quick-info sale-pimg">
-                <figure><img src="images/product-3.jpg" alt="product" data-other-src="images/product-31.jpg" /></figure>
+                <figure><img src="<% URL::asset('images/product-3.jpg') %>" alt="product" data-other-src="<% URL::asset('images/product-31.jpg') %>" /></figure>
                 <ul>
                     <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Add to Cart</a></li>
                     <li><a href="javascript:void(0)" data-toggle="modal" data-target=".quick-view"><i class="fa fa-search-plus"></i> Quick View</a></li>
@@ -102,7 +104,7 @@
 
         <article class="item">
             <div class="quick-info sale-pimg">
-                <figure><img src="images/product-4.jpg" alt="product" data-other-src="images/product-41.jpg" /></figure>
+                <figure><img src="<% URL::asset('images/product-4.jpg') %>" alt="product" data-other-src="<% URL::asset('images/product-41.jpg') %>" /></figure>
                 <ul>
                     <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Add to Cart</a></li>
                     <li><a href="javascript:void(0)" data-toggle="modal" data-target=".quick-view"><i class="fa fa-search-plus"></i> Quick View</a></li>
@@ -118,7 +120,7 @@
 
         <article class="item">
             <div class="quick-info sale-pimg">
-                <figure><img src="images/product-1.jpg" alt="product" data-other-src="images/product-11.jpg" /></figure>
+                <figure><img src="<% URL::asset('images/product-1.jpg') %>" alt="product" data-other-src="<% URL::asset('images/product-11.jpg') %>" /></figure>
                 <ul>
                     <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Add to Cart</a></li>
                     <li><a href="javascript:void(0)" data-toggle="modal" data-target=".quick-view"><i class="fa fa-search-plus"></i> Quick View</a></li>
@@ -134,7 +136,7 @@
 
         <article class="item">
             <div class="quick-info sale-pimg">
-                <figure><img src="images/product-2.jpg" alt="product" data-other-src="images/product-21.jpg" /></figure>
+                <figure><img src="<% URL::asset('images/product-2.jpg') %>" alt="product" data-other-src="<% URL::asset('images/product-21.jpg') %>" /></figure>
                 <ul>
                     <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Add to Cart</a></li>
                     <li><a href="javascript:void(0)" data-toggle="modal" data-target=".quick-view"><i class="fa fa-search-plus"></i> Quick View</a></li>
@@ -150,7 +152,7 @@
 
         <article class="item">
             <div class="quick-info sale-pimg">
-                <figure><img src="images/product-3.jpg" alt="product" data-other-src="images/product-31.jpg" /></figure>
+                <figure><img src="<% URL::asset('images/product-3.jpg') %>" alt="product" data-other-src="<% URL::asset('images/product-31.jpg') %>" /></figure>
                 <ul>
                     <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Add to Cart</a></li>
                     <li><a href="javascript:void(0)" data-toggle="modal" data-target=".quick-view"><i class="fa fa-search-plus"></i> Quick View</a></li>
@@ -166,7 +168,7 @@
 
         <article class="item">
             <div class="quick-info sale-pimg">
-                <figure><img src="images/product-4.jpg" alt="product" data-other-src="images/product-41.jpg" /></figure>
+                <figure><img src="<% URL::asset('images/product-4.jpg') %>" alt="product" data-other-src="<% URL::asset('images/product-41.jpg') %>" /></figure>
                 <ul>
                     <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Add to Cart</a></li>
                     <li><a href="javascript:void(0)" data-toggle="modal" data-target=".quick-view"><i class="fa fa-search-plus"></i> Quick View</a></li>
@@ -217,7 +219,7 @@
                 <article class="item">
                     <i class="new">New</i>
                     <div class="quick-info sale-pimg">
-                        <figure><img src="images/product-1.jpg" alt="product" data-other-src="images/product-11.jpg"  /></figure>
+                        <figure><img src="<% URL::asset('images/product-1.jpg') %>" alt="product" data-other-src="<% URL::asset('images/product-11.jpg') %>"  /></figure>
                         <ul>
                             <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Add to Cart</a></li>
                             <li><a href="#"><i class="fa fa-search-plus"></i> Quick View</a></li>
@@ -235,7 +237,7 @@
                 <article class="item">
                     <i class="sale-i">Sale</i>
                     <div class="quick-info sale-pimg">
-                        <figure><img src="images/product-2.jpg" alt="product" data-other-src="images/product-21.jpg"  /></figure>
+                        <figure><img src="<% URL::asset('images/product-2.jpg') %>" alt="product" data-other-src="<% URL::asset('images/product-21.jpg') %>"  /></figure>
                         <ul>
                             <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Add to Cart</a></li>
                             <li><a href="#"><i class="fa fa-search-plus"></i> Quick View</a></li>
@@ -253,7 +255,7 @@
                 <article class="item">
                     <i class="new">New</i>
                     <div class="quick-info sale-pimg">
-                        <figure><img src="images/product-3.jpg" alt="product" data-other-src="images/product-31.jpg"  /></figure>
+                        <figure><img src="<% URL::asset('images/product-3.jpg') %>" alt="product" data-other-src="<% URL::asset('images/product-31.jpg') %>"  /></figure>
                         <ul>
                             <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Add to Cart</a></li>
                             <li><a href="#"><i class="fa fa-search-plus"></i> Quick View</a></li>
@@ -271,7 +273,7 @@
                 <article class="item">
                     <i class="sale-i">Sale</i>
                     <div class="quick-info sale-pimg">
-                        <figure><img src="images/product-4.jpg" alt="product" data-other-src="images/product-41.jpg"  /></figure>
+                        <figure><img src="<% URL::asset('images/product-4.jpg') %>" alt="product" data-other-src="<% URL::asset('images/product-41.jpg') %>"  /></figure>
                         <ul>
                             <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Add to Cart</a></li>
                             <li><a href="#"><i class="fa fa-search-plus"></i> Quick View</a></li>
@@ -289,7 +291,7 @@
                 <article class="item">
                     <i class="new">New</i>
                     <div class="quick-info sale-pimg">
-                        <figure><img src="images/product-1.jpg" alt="product" data-other-src="images/product-11.jpg"  /></figure>
+                        <figure><img src="<% URL::asset('images/product-1.jpg') %>" alt="product" data-other-src="<% URL::asset('images/product-11.jpg') %>"  /></figure>
                         <ul>
                             <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Add to Cart</a></li>
                             <li><a href="#"><i class="fa fa-search-plus"></i> Quick View</a></li>
@@ -307,7 +309,7 @@
                 <article class="item">
                     <i class="sale-i">Sale</i>
                     <div class="quick-info sale-pimg">
-                        <figure><img src="images/product-2.jpg" alt="product" data-other-src="images/product-21.jpg"  /></figure>
+                        <figure><img src="<% URL::asset('images/product-2.jpg') %>" alt="product" data-other-src="<% URL::asset('images/product-21.jpg') %>"  /></figure>
                         <ul>
                             <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Add to Cart</a></li>
                             <li><a href="#"><i class="fa fa-search-plus"></i> Quick View</a></li>
@@ -325,7 +327,7 @@
                 <article class="item">
                     <i class="new">New</i>
                     <div class="quick-info sale-pimg">
-                        <figure><img src="images/product-3.jpg" alt="product" data-other-src="images/product-31.jpg"  /></figure>
+                        <figure><img src="<% URL::asset('images/product-3.jpg') %>" alt="product" data-other-src="<% URL::asset('images/product-31.jpg') %>"  /></figure>
                         <ul>
                             <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Add to Cart</a></li>
                             <li><a href="#"><i class="fa fa-search-plus"></i> Quick View</a></li>
@@ -343,7 +345,7 @@
                 <article class="item">
                     <i class="sale-i">Sale</i>
                     <div class="quick-info sale-pimg">
-                        <figure><img src="images/product-4.jpg" alt="product" data-other-src="images/product-41.jpg"  /></figure>
+                        <figure><img src="<% URL::asset('images/product-4.jpg') %>" alt="product" data-other-src="<% URL::asset('images/product-41.jpg') %>"  /></figure>
                         <ul>
                             <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Add to Cart</a></li>
                             <li><a href="#"><i class="fa fa-search-plus"></i> Quick View</a></li>
@@ -374,7 +376,7 @@
     <div class="pro-slider owl-carousel text-center feature-slider">
         <article class="item">
             <div class="quick-info sale-pimg">
-                <figure><img src="images/product-1.jpg" alt="product" data-other-src="images/product-11.jpg" /></figure>
+                <figure><img src="<% URL::asset('images/product-1.jpg') %>" alt="product" data-other-src="<% URL::asset('images/product-11.jpg') %>" /></figure>
                 <ul>
                     <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Add to Cart</a></li>
                     <li><a href="javascript:void(0)" data-toggle="modal" data-target=".quick-view"><i class="fa fa-search-plus"></i> Quick View</a></li>
@@ -390,7 +392,7 @@
 
         <article class="item">
             <div class="quick-info sale-pimg">
-                <figure><img src="images/product-2.jpg" alt="product" data-other-src="images/product-21.jpg" /></figure>
+                <figure><img src="<% URL::asset('images/product-2.jpg') %>" alt="product" data-other-src="<% URL::asset('images/product-21.jpg') %>" /></figure>
                 <ul>
                     <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Add to Cart</a></li>
                     <li><a href="javascript:void(0)" data-toggle="modal" data-target=".quick-view"><i class="fa fa-search-plus"></i> Quick View</a></li>
@@ -406,7 +408,7 @@
 
         <article class="item">
             <div class="quick-info sale-pimg">
-                <figure><img src="images/product-3.jpg" alt="product" data-other-src="images/product-31.jpg" /></figure>
+                <figure><img src="<% URL::asset('images/product-3.jpg') %>" alt="product" data-other-src="<% URL::asset('images/product-31.jpg') %>" /></figure>
                 <ul>
                     <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Add to Cart</a></li>
                     <li><a href="javascript:void(0)" data-toggle="modal" data-target=".quick-view"><i class="fa fa-search-plus"></i> Quick View</a></li>
@@ -422,7 +424,7 @@
 
         <article class="item">
             <div class="quick-info sale-pimg">
-                <figure><img src="images/product-4.jpg" alt="product" data-other-src="images/product-41.jpg" /></figure>
+                <figure><img src="<% URL::asset('images/product-4.jpg') %>" alt="product" data-other-src="<% URL::asset('images/product-41.jpg') %>" /></figure>
                 <ul>
                     <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Add to Cart</a></li>
                     <li><a href="javascript:void(0)" data-toggle="modal" data-target=".quick-view"><i class="fa fa-search-plus"></i> Quick View</a></li>
@@ -438,7 +440,7 @@
 
         <article class="item">
             <div class="quick-info sale-pimg">
-                <figure><img src="images/product-1.jpg" alt="product" data-other-src="images/product-11.jpg" /></figure>
+                <figure><img src="<% URL::asset('images/product-1.jpg') %>" alt="product" data-other-src="<% URL::asset('images/product-11.jpg') %>" /></figure>
                 <ul>
                     <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Add to Cart</a></li>
                     <li><a href="javascript:void(0)" data-toggle="modal" data-target=".quick-view"><i class="fa fa-search-plus"></i> Quick View</a></li>
@@ -454,7 +456,7 @@
 
         <article class="item">
             <div class="quick-info sale-pimg">
-                <figure><img src="images/product-2.jpg" alt="product" data-other-src="images/product-21.jpg" /></figure>
+                <figure><img src="<% URL::asset('images/product-2.jpg') %>" alt="product" data-other-src="<% URL::asset('images/product-21.jpg') %>" /></figure>
                 <ul>
                     <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Add to Cart</a></li>
                     <li><a href="javascript:void(0)" data-toggle="modal" data-target=".quick-view"><i class="fa fa-search-plus"></i> Quick View</a></li>
@@ -470,7 +472,7 @@
 
         <article class="item">
             <div class="quick-info sale-pimg">
-                <figure><img src="images/product-3.jpg" alt="product" data-other-src="images/product-31.jpg" /></figure>
+                <figure><img src="<% URL::asset('images/product-3.jpg') %>" alt="product" data-other-src="<% URL::asset('images/product-31.jpg') %>" /></figure>
                 <ul>
                     <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Add to Cart</a></li>
                     <li><a href="javascript:void(0)" data-toggle="modal" data-target=".quick-view"><i class="fa fa-search-plus"></i> Quick View</a></li>
@@ -486,7 +488,7 @@
 
         <article class="item">
             <div class="quick-info sale-pimg">
-                <figure><img src="images/product-4.jpg" alt="product" data-other-src="images/product-41.jpg" /></figure>
+                <figure><img src="<% URL::asset('images/product-4.jpg') %>" alt="product" data-other-src="<% URL::asset('images/product-41.jpg') %>" /></figure>
                 <ul>
                     <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Add to Cart</a></li>
                     <li><a href="javascript:void(0)" data-toggle="modal" data-target=".quick-view"><i class="fa fa-search-plus"></i> Quick View</a></li>
@@ -503,3 +505,4 @@
 </div>
 <!--[/fproducts]-->
 @stop
+<?php endif;?>
