@@ -12,10 +12,10 @@ myDemoApp.service('productService', function($http, $q) {
         });
     };
     this.getProducts = function() {
-        return $http.get('admin/products/result?limit=10')
+        return $http.get('admin/products/list?limit=10')
             .then(function (response) {
-                deferred.resolve(response.data);
-                categories = response.data;
+                deferred.resolve(response.data.data);
+                //categories = response.data;
                 return deferred.promise;
             }, function (response) {
                 console.log(response);
@@ -23,11 +23,11 @@ myDemoApp.service('productService', function($http, $q) {
     };
     this.fetch = function($scope) {
         $http
-            .get("admin/product/fetch?term=" + $scope.search)
+            .get("admin/products/list?term=" + $scope.search)
             .success(
                 function(response){
-                    deferred.resolve(response);
-                    $scope.products = response;
+                    deferred.resolve(response.data);
+                    $scope.products = response.data;
                     return deferred.promise;
                 }
             );

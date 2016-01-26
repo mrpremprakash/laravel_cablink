@@ -2,10 +2,12 @@ myDemoApp.service('categoryService', function($http, $q) {
     var categories = [];
     var deferred = $q.defer();
     this.getCategories = function() {
-        return $http.get('admin/categories/result?limit=10')
+        return $http.get('admin/categories/list?limit=10')
             .then(function (response) {
-                deferred.resolve(response.data);
-                categories = response.data;
+                var data = response.data.data;
+                console.log(data);
+                deferred.resolve(data);
+                categories = data;
                 return deferred.promise;
             }, function (response) {
                 console.log(response);
