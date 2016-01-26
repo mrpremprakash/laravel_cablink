@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>... CabLink ...</title>
-    <base href="/">
+    <base href="<% URL::asset('/') %>">
     <link href="<% URL::asset('css/bootstrap.css') %>" rel="stylesheet">
     <link href="<% URL::asset('css/startmin.css') %>" rel="stylesheet">
     <link href="<% URL::asset('css/font-awesome.min.css') %>" rel="stylesheet">
@@ -74,8 +74,8 @@
                         <h4><a href="signup.html"><i class="fa fa-external-link"></i> New User Signup</a></h4>
                     </div>
                     <div class="social-links">
-                        <a href="#" target="_blank"><img src="images/facebook-btn.png" alt="facebook" /></a>
-                        <a href="#" target="_blank"><img src="images/google-btn.png" alt="google-plus" /></a>
+                        <a href="#" target="_blank"><img src="<% URL::asset('images/facebook-btn.png') %>" alt="facebook" /></a>
+                        <a href="#" target="_blank"><img src="<% URL::asset('images/google-btn.png') %>" alt="google-plus" /></a>
                     </div>
 
                 </div>
@@ -125,19 +125,19 @@
                             <div class="slider-pro col-sm-4">
                                 <!--[product full image]-->
                                 <div class="owl-carousel sync1">
-                                    <div class="item zoom ex1"><img src="images/men/product-dt1.jpg" alt="men products"></div>
-                                    <div class="item zoom ex1"><img src="images/men/product-dt1.jpg" alt="men products"></div>
-                                    <div class="item zoom ex1"><img src="images/men/product-dt1.jpg" alt="men products"></div>
-                                    <div class="item zoom ex1"><img src="images/men/product-dt1.jpg" alt="men products"></div>
+                                    <div class="item zoom ex1"><img src="<% URL::asset('images/men/product-dt1.jpg') %>" alt="men products"></div>
+                                    <div class="item zoom ex1"><img src="<% URL::asset('images/men/product-dt1.jpg') %>" alt="men products"></div>
+                                    <div class="item zoom ex1"><img src="<% URL::asset('images/men/product-dt1.jpg') %>" alt="men products"></div>
+                                    <div class="item zoom ex1"><img src="<% URL::asset('images/men/product-dt1.jpg') %>" alt="men products"></div>
                                 </div>
                                 <!--[/product full image]-->
 
                                 <!--[product thumbnail image]-->
                                 <div class="owl-carousel  sync2">
-                                    <div class="item"><img src="images/men/product-dt1.jpg" alt="men products"></div>
-                                    <div class="item"><img src="images/men/product-dt1.jpg" alt="men products"></div>
-                                    <div class="item"><img src="images/men/product-dt1.jpg" alt="men products"></div>
-                                    <div class="item"><img src="images/men/product-dt1.jpg" alt="men products"></div>
+                                    <div class="item"><img src="<% URL::asset('images/men/product-dt1.jpg') %>" alt="men products"></div>
+                                    <div class="item"><img src="<% URL::asset('images/men/product-dt1.jpg') %>" alt="men products"></div>
+                                    <div class="item"><img src="<% URL::asset('images/men/product-dt1.jpg') %>" alt="men products"></div>
+                                    <div class="item"><img src="<% URL::asset('images/men/product-dt1.jpg') %>" alt="men products"></div>
                                 </div>
                                 <!--[/product thumbnail image]-->
 
@@ -166,9 +166,9 @@
                                 </ul>
                                 <p><strong>Also available in these colors</strong></p>
                                 <ul class="avail-color">
-                                    <li><a href="#"><img src="images/men/product-dt1.jpg" alt="available" /></a></li>
-                                    <li><a href="#"><img src="images/men/product-dt1.jpg" alt="available" /></a></li>
-                                    <li><a href="#"><img src="images/men/product-dt1.jpg" alt="available" /></a></li>
+                                    <li><a href="#"><img src="<% URL::asset('images/men/product-dt1.jpg') %>" alt="available" /></a></li>
+                                    <li><a href="#"><img src="<% URL::asset('images/men/product-dt1.jpg') %>" alt="available" /></a></li>
+                                    <li><a href="#"><img src="<% URL::asset('images/men/product-dt1.jpg') %>" alt="available" /></a></li>
                                 </ul>
                                 <ul class="list-inline size-color">
                                     <li>
@@ -214,18 +214,18 @@
 
 
 <!--[all-scripts]-->
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/owl.carousel.min.js"></script>
-<script type="text/javascript" src="js/jquery.raty.js"></script>
-<script type="text/javascript" src="js/jquery.zoom.js"></script>
+<script type="text/javascript" src="<% URL::asset('js/frontend/jquery.min.js') %>"></script>
+<script type="text/javascript" src="<% URL::asset('js/frontend/bootstrap.min.js') %>"></script>
+<script type="text/javascript" src="<% URL::asset('js/frontend/owl.carousel.min.js') %>"></script>
+<script type="text/javascript" src="<% URL::asset('js/frontend/jquery.raty.js') %>"></script>
+<script type="text/javascript" src="<% URL::asset('js/frontend/jquery.zoom.js') %>"></script>
 <!--<script type="text/javascript" src="js/custom.js"></script>-->
 
-<script type="text/javascript" src="<% URL::asset('angularjs/angular.min.js') %>"></script>
-<script type="text/javascript" src="angularjs/angular-ui-router.min.js"></script>
-<script type="text/javascript" src="js/app.js"></script>
-<script type="text/javascript" src="js/productService.js"></script>
-<script type="text/javascript" src="js/product_ctrl.js"></script>
+<script type="text/javascript" src="<% URL::asset('js/angular.min.js') %>"></script>
+<script type="text/javascript" src="<% URL::asset('js/angular-ui-router.min.js') %>"></script>
+<script type="text/javascript" src="<% URL::asset('js/frontend/app.js') %>"></script>
+<script type="text/javascript" src="<% URL::asset('js/frontend/productService.js') %>"></script>
+<script type="text/javascript" src="<% URL::asset('js/frontend/product_ctrl.js') %>"></script>
 
 <!--[/all-scripts]-->
 </body>

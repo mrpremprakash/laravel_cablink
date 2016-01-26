@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="logo-sect-m">
-            <a href="index.html"><img src="images/logo.jpg" alt="Cablink" /></a>
+            <a href="index.html"><img src="<% URL::asset('images/logo.jpg') %>" alt="Cablink" /></a>
         </div>
         <div class="col-xs-12">
             <ul class="phone-email pull-left">
@@ -40,7 +40,7 @@
     <div class="clearfix head-btm navbar navbar-default" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
         <!--[logo-sect]-->
         <div class="col-sm-3 col-xs-12 logo-sect hidden-xs">
-            <a href="index.html"><img src="images/logo.jpg" alt="e-commerce" /></a>
+            <a href="index.html"><img src="<% URL::asset('images/logo.jpg') %>" alt="e-commerce" /></a>
         </div>
         <!--[/logo-sect]-->
 
