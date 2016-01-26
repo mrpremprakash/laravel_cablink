@@ -21,25 +21,25 @@ myDemoApp.controller('productListCtrl', function($scope, $http, productService) 
     };
     
     $scope.submitForm = function(isValid) {
-        console.log($scope.imageFileName);
-        console.log($scope);
-        //if (isValid) {
-        //    var data = [];
-        //    data.push('name='+$scope.productForm.name);
-        //    data.push('category_id='+$scope.productForm.category_id);
-        //    data.push('price='+$scope.productForm.price);
-        //    data.push('status='+$scope.productForm.status);
-        //    data.push('description='+$scope.productForm.desc);
-        //
-        //    productService.saveProduct(data).then(function(data) {
-        //        if (data.data.error) {
-        //            alert(data.data.data.message);
-        //        } else {
-        //            alert('Product added successfully!');
-        //            $scope.productForm = [];
-        //        }
-        //    });
-        //}
+        //console.log($scope.imageFileName);
+        //console.log($scope);
+        if (isValid) {
+            var data = [];
+            data.push('name='+$scope.productForm.name);
+            data.push('category_id='+$scope.productForm.category_id);
+            data.push('price='+$scope.productForm.price);
+            data.push('status='+$scope.productForm.status);
+            data.push('description='+$scope.productForm.desc);
+
+            productService.saveProduct(data).then(function(data) {
+                if (data.data.error) {
+                    alert(data.data.data.message);
+                } else {
+                    alert('Product added successfully!');
+                    $scope.productForm = [];
+                }
+            });
+        }
     }
 })
 ;

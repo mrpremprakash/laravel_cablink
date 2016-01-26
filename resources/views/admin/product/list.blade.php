@@ -59,7 +59,7 @@
                                     </thead>
                                     <tbody>
                                     <tr class="gradeA odd" role="row" ng-repeat="item in products">
-                                        <td ><img ng-src="uploads/{{item.img}}" height="50"/></td>
+                                        <td ><img ng-src="<% URL::asset('/uploads/{{item.img}}') %>" height="50"/></td>
                                         <td>{{item.name}}</td>
                                         <td>{{item.description}}</td>
                                         <td>{{item.price}}</td>

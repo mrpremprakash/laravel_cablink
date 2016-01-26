@@ -10,6 +10,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Routing\Controller as BaseController;
 
+use App\Http\Models\Category;
+use DB;
+use Request;
 
 class CategoryController extends BaseController
 {
@@ -18,8 +21,16 @@ class CategoryController extends BaseController
     }
 
     public function add() {
-            return view('admin/category/add');
-
-
+        return view('admin/category/add');
+    }
+    public function lists() {
+        $limit = Request::input('limit', 20);
+        $term = Request::input('term');
+        $query = Category::select('category_id', 'name', 'parent_id', 'status', 'level');
+        if(!empty($term)) {
+            $query->where('name', 'like', DB::raw("'%".$term."%'"));
+        }
+        $items = $query->paginate();
+        return response()->json($items);
     }
 }
