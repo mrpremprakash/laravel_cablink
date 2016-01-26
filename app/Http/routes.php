@@ -15,6 +15,12 @@
 //    return view('welcome');
 //});
 
+Route::controllers([
+    'auth' => 'Auth\AuthController',
+    'password' => 'Auth\PasswordController',
+]);
+
+
 Route::group(['prefix' => '/'], function () {
     Route::get('/', ['as' => 'frontend.index', 'uses' => 'frontendController@index']);
     Route::get('/index_content', ['as' => 'frontend.index', 'uses' => 'frontendController@index2']);
@@ -24,7 +30,7 @@ Route::group(['prefix' => '/'], function () {
 });
 
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
     Route::get('/', ['as' => 'admin.login', 'uses' => 'loginController@index']);
     Route::get('/dashboard', ['as' => 'admin.dashboard', 'uses' => 'productController@dashboard']);
 
